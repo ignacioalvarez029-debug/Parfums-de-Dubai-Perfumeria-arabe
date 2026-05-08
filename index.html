@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Al Misk � Perfumer�a �rabe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+
+</head>
+<!-- HTML Section -->
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <div class="logo">
+    <span class="logo-title">AL MISK</span>
+    <span class="logo-sub">Perfumer�a Oriental � Est. 2010</span>
+  </div>
+  <nav>
+    <a href="#linea-oud">Oud</a>
+    <a href="#linea-musk">Musk</a>
+    <a href="#linea-rose">Rose</a>
+    <a href="#linea-amber">Amber</a>
+  </nav>
+  <span class="header-ornament">? ? ?</span>
+</header>
+
+<!-- HERO -->
+
+<div class="hero">
+  <p class="hero-tag">? Colecci�n Exclusiva de Oriente ?</p>
+  <h1>El Arte de la<br/><em>Fragancia �rabe</em></h1>
+  <p>Cada frasco guarda siglos de tradici�n perfumera. Descubra nuestras l�neas exclusivas, elaboradas con los ingredientes m�s preciados de Oriente.</p>
+  <span class="arabic-ornament">?????? ???????</span>
+</div>
+
+<!-- MAIN LAYOUT -->
+
+<div class="main-layout">
+
+  <!-- CATALOG -->
+
+  <div class="catalog">
+
+<!-- L�NEA OUD -->
+<div class="line-section" id="linea-oud" style="animation-delay:0.1s">
+  <div class="line-header">
+    <div class="line-icon">??</div>
+    <div class="line-info">
+      <h2>L�NEA OUD</h2>
+      <p>La esencia m�s codiciada del mundo �rabe � madera sagrada de Agarwood</p>
+    </div>
+    <span class="line-badge">Colecci�n Principal</span>
+  </div>
+  <div class="products-grid" id="grid-oud"></div>
+</div>
+
+<div class="ornament-divider">� ? �</div>
+
+<!-- L�NEA MUSK -->
+<div class="line-section" id="linea-musk" style="animation-delay:0.2s">
+  <div class="line-header">
+    <div class="line-icon">??</div>
+    <div class="line-info">
+      <h2>L�NEA MUSK</h2>
+      <p>Suavidad et�rea, presencia duradera � el almizcle blanco del desierto</p>
+    </div>
+    <span class="line-badge">Cl�sicos</span>
+  </div>
+  <div class="products-grid" id="grid-musk"></div>
+</div>
+
+<div class="ornament-divider">� ? �</div>
+
+<!-- L�NEA ROSE -->
+<div class="line-section" id="linea-rose" style="animation-delay:0.3s">
+  <div class="line-header">
+    <div class="line-icon">??</div>
+    <div class="line-info">
+      <h2>L�NEA ROSE</h2>
+      <p>Rosa de Taif � la flor m�s arom�tica del mundo, destilada con maestr�a</p>
+    </div>
+    <span class="line-badge">Edici�n Especial</span>
+  </div>
+  <div class="products-grid" id="grid-rose"></div>
+</div>
+
+<div class="ornament-divider">� ? �</div>
+
+<!-- L�NEA AMBER -->
+<div class="line-section" id="linea-amber" style="animation-delay:0.4s">
+  <div class="line-header">
+    <div class="line-icon">??</div>
+    <div class="line-info">
+      <h2>L�NEA AMBER</h2>
+      <p>�mbar c�lido y especiado � notas profundas que envuelven el alma</p>
+    </div>
+    <span class="line-badge">Temporada</span>
+  </div>
+  <div class="products-grid" id="grid-amber"></div>
+</div>
+
+  </div><!-- /catalog -->
+
+  <!-- WHATSAPP SIDEBAR -->
+
+  <div class="wa-sidebar">
+    <div class="wa-panel">
+      <div class="wa-header">
+        <div class="wa-avatar">??</div>
+        <div class="wa-info">
+          <h3>AL MISK</h3>
+          <p><span class="wa-online-dot"></span>En l�nea � respondemos r�pido</p>
+        </div>
+      </div>
+
+  <div class="wa-messages" id="waMessages">
+    <div class="msg bot">
+      ? �Bienvenido a <strong>Al Misk</strong>! Soy su asesor de fragancias. �En qu� puedo ayudarle hoy?
+      <div class="msg-time">Ahora</div>
+    </div>
+    <div class="msg bot">
+      Puede preguntarme por disponibilidad, precios, combinaciones o hacer un pedido. Con gusto le atiendo ??
+      <div class="msg-time">Ahora</div>
+    </div>
+  </div>
+
+  <div class="quick-replies">
+    <button class="qr-btn" onclick="sendQuick('Ver Oud disponibles')">?? Oud</button>
+    <button class="qr-btn" onclick="sendQuick('Quiero info de Musk')">?? Musk</button>
+    <button class="qr-btn" onclick="sendQuick('Precios de Rose')">?? Rose</button>
+    <button class="qr-btn" onclick="sendQuick('Hacer un pedido')">?? Pedido</button>
+    <button class="qr-btn" onclick="sendQuick('�Tienen env�os?')">?? Env�os</button>
+  </div>
+
+  <div class="wa-compose">
+    <textarea id="waInput" placeholder="Escribe tu consulta..." rows="1"
+      onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendMessage()}"
+      oninput="this.style.height='auto';this.style.height=this.scrollHeight+'px'"></textarea>
+    <button class="send-btn" onclick="sendMessage()">
+      <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>
+    </button>
+  </div>
+
+  <div class="wa-footer">
+    Contin�a en <a href="#" id="waLink">WhatsApp</a> � Al Misk Perfumer�a
+  </div>
+</div>
+
+  </div>
+
+</div>
+
+<footer>
+  <span class="footer-gold">AL MISK</span>
+  � 2026 Al Misk Perfumer�a Oriental � Todos los derechos reservados � Fragancias de Oriente
+</footer>
+
+<script>
+// --- DATA -------------------------------------------------------------------
+
+const WHATSAPP_NUMBER = "5491100000000"; // ? Cambia por tu n�mero real (con c�digo de pa�s, sin +)
+
+const catalogData = {
+  oud: [
+    { name: "Oud Majestic", variant: "Concentrado Puro", price: "$85", size: "12ml", stock: true,  notes: ["Madera", "Tierra", "Especias"],      color: "#5a3e1b", color2: "#8b5e2c" },
+    { name: "Oud Al Layl", variant: "Eau de Parfum",     price: "$72", size: "50ml", stock: true,  notes: ["Oud", "Vainilla", "S�ndalo"],        color: "#3d2510", color2: "#6b3e1a" },
+    { name: "Oud Royale",  variant: "Attar Aceite",      price: "$110",size: "6ml",  stock: false, notes: ["Oud Cambodi", "Rosas", "Almizcle"],  color: "#4a2e0e", color2: "#7a4e20" },
+    { name: "Oud Noir",    variant: "Extrait",            price: "$95", size: "30ml", stock: true,  notes: ["Oud Ahumado", "Incienso", "Brea"],   color: "#1a1008", color2: "#3d2010" },
+    { name: "Oud Sultani", variant: "Concentrado",        price: "$65", size: "12ml", stock: false, notes: ["Oud", "Cardamomo", "Clavo"],          color: "#4e3010", color2: "#7e5020" },
+    { name: "Oud Fasil",   variant: "Eau de Parfum",      price: "$58", size: "100ml",stock: true,  notes: ["Oud Ligero", "Bergamota", "Cedro"],  color: "#3a2a10", color2: "#6a4a20" },
+  ],
+  musk: [
+    { name: "White Musk",    variant: "Eau de Parfum",  price: "$55", size: "50ml", stock: true,  notes: ["Musk", "Jazm�n", "Iris"],           color: "#9e9080", color2: "#c8b89a" },
+    { name: "Musk Al Tahir", variant: "Attar Aceite",   price: "$48", size: "6ml",  stock: true,  notes: ["Musk Blanco", "S�ndalo"],           color: "#7a6a5a", color2: "#a89880" },
+    { name: "Hareem Rose",   variant: "Concentrado",    price: "$62", size: "12ml", stock: false, notes: ["Musk", "Rosa", "Vainilla"],          color: "#8a7060", color2: "#b89880" },
+    { name: "Desert Musk",   variant: "Eau de Parfum",  price: "$50", size: "100ml",stock: true,  notes: ["Musk", "Arena", "Cedro"],           color: "#b09070", color2: "#d4b090" },
+  ],
+  rose: [
+    { name: "Taif Rose",     variant: "Attar Puro",     price: "$130",size: "6ml",  stock: true,  notes: ["Rosa Taif", "Almizcle"],            color: "#8b2040", color2: "#c04060" },
+    { name: "Rose Oud",      variant: "Extrait",        price: "$90", size: "30ml", stock: true,  notes: ["Rosa", "Oud", "S�ndalo"],           color: "#6b1830", color2: "#a03050" },
+    { name: "Rose Saffron",  variant: "Eau de Parfum",  price: "$75", size: "50ml", stock: false, notes: ["Rosa", "Azafr�n", "Incienso"],      color: "#7a2030", color2: "#b04050" },
+    { name: "Gulabi",        variant: "Concentrado",    price: "$68", size: "12ml", stock: true,  notes: ["Rosa India", "Jazm�n", "Musk"],     color: "#952848", color2: "#c55070" },
+    { name: "Rose de Nuit",  variant: "Eau de Parfum",  price: "$60", size: "100ml",stock: true,  notes: ["Rosa Nocturna", "Almendro", "Iris"],color: "#5a1028", color2: "#903048" },
+  ],
+  amber: [
+    { name: "Amber Sultani", variant: "Eau de Parfum",  price: "$65", size: "50ml", stock: true,  notes: ["�mbar", "Vainilla", "Bals�mico"],   color: "#8b5e10", color2: "#c08820" },
+    { name: "Gold Amber",    variant: "Attar Aceite",   price: "$58", size: "6ml",  stock: false, notes: ["�mbar Oro", "Labdanum", "Resina"],  color: "#7a4e08", color2: "#aa7818" },
+    { name: "Amber Noir",    variant: "Extrait",        price: "$88", size: "30ml", stock: true,  notes: ["�mbar Negro", "Cuero", "Tabaco"],   color: "#4e3008", color2: "#7a5018" },
+    { name: "Oriental Ambar",variant: "Concentrado",    price: "$72", size: "12ml", stock: true,  notes: ["�mbar", "Cardamomo", "Nuez Moscada"],color:"#6a4010", color2: "#9a6818" },
+  ]
+};
+
+// --- SVG BOTTLE RENDERER ----------------------------------------------------
+
+function bottleSVG(c1, c2) {
+  return `<svg class="bottle-svg" viewBox="0 0 80 130" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="bg${c1.replace('#','')}" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="${c1}"/>
+        <stop offset="100%" stop-color="${c2}"/>
+      </linearGradient>
+      <linearGradient id="shine${c1.replace('#','')}" x1="0%" y1="0%" x2="40%" y2="100%">
+        <stop offset="0%" stop-color="rgba(255,255,255,0.25)"/>
+        <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+      </linearGradient>
+    </defs>
+    <!-- Tapa -->
+    <rect x="28" y="0" width="24" height="10" rx="2" fill="${c2}" opacity="0.9"/>
+    <rect x="31" y="10" width="18" height="14" rx="1" fill="${c1}"/>
+    <!-- Cuerpo -->
+    <rect x="12" y="24" width="56" height="90" rx="8" fill="url(#bg${c1.replace('#','')})"/>
+    <!-- Brillo -->
+    <rect x="14" y="26" width="20" height="85" rx="6" fill="url(#shine${c1.replace('#','')})"/>
+    <!-- Etiqueta -->
+    <rect x="18" y="55" width="44" height="40" rx="3" fill="rgba(0,0,0,0.25)"/>
+    <rect x="20" y="57" width="40" height="36" rx="2" fill="rgba(201,168,76,0.08)" stroke="rgba(201,168,76,0.3)" stroke-width="0.5"/>
+    <!-- Decoraci�n etiqueta -->
+    <line x1="24" y1="63" x2="56" y2="63" stroke="rgba(201,168,76,0.4)" stroke-width="0.5"/>
+    <line x1="24" y1="87" x2="56" y2="87" stroke="rgba(201,168,76,0.4)" stroke-width="0.5"/>
+    <circle cx="40" cy="75" r="6" fill="none" stroke="rgba(201,168,76,0.4)" stroke-width="0.5"/>
+    <circle cx="40" cy="75" r="2" fill="rgba(201,168,76,0.3)"/>
+    <!-- Base -->
+    <rect x="16" y="110" width="48" height="4" rx="2" fill="${c1}" opacity="0.6"/>
+  </svg>`;
+}
+
+// --- RENDER PRODUCTS --------------------------------------------------------
+
+function renderGrid(containerId, products) {
+  const el = document.getElementById(containerId);
+  el.innerHTML = products.map(p => `
+    <div class="product-card ${p.stock ? '' : 'out-of-stock'}" onclick="addToChat('${p.name}')">
+      <div class="card-visual" style="background:linear-gradient(135deg,${p.color}22,${p.color2}44)">
+        ${bottleSVG(p.color, p.color2)}
+        <span class="stock-badge ${p.stock ? 'in' : 'out'}">${p.stock ? '? Stock' : '? Agotado'}</span>
+      </div>
+      <div class="card-body">
+        <div class="card-name">${p.name}</div>
+        <div class="card-variant">${p.variant}</div>
+        <div class="card-notes">${p.notes.map(n => `<span class="note-tag">${n}</span>`).join('')}</div>
+        <div class="card-footer">
+          <div>
+            <div class="card-price">${p.price}</div>
+            <div class="card-size">${p.size}</div>
+          </div>
+          <button class="btn-ask" onclick="event.stopPropagation();addToChat('${p.name}')">Consultar</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+renderGrid('grid-oud',   catalogData.oud);
+renderGrid('grid-musk',  catalogData.musk);
+renderGrid('grid-rose',  catalogData.rose);
+renderGrid('grid-amber', catalogData.amber);
+
+// --- WHATSAPP CHAT -----------------------------------------------------------
+
+const botReplies = {
+  'ver oud disponibles':   '?? Nuestra l�nea Oud cuenta con 4 opciones disponibles actualmente: Oud Majestic, Oud Al Layl, Oud Noir y Oud Fasil. �Le interesa alguno en particular?',
+  'quiero info de musk':   '?? La l�nea Musk es perfecta para uso diario. White Musk y Desert Musk est�n en stock. Hareem Rose est� temporalmente agotado. �Desea precios?',
+  'precios de rose':       '?? L�nea Rose: Taif Rose (attar puro) $130 � Rose Oud $90 � Gulabi $68 � Rose de Nuit $60. �Todos son de alta concentraci�n!',
+  'hacer un pedido':       '?? �Con mucho gusto! Para gestionar su pedido necesito: nombre del producto, cantidad y su direcci�n de entrega. Tambi�n puede escribirlo aqu� y lo transferimos a WhatsApp.',
+  '�tienen env�os?':       '?? S�, realizamos env�os a todo el pa�s. Env�o gratis en compras mayores a $150. Entrega en 2-4 d�as h�biles. �Tiene alguna consulta adicional?',
+};
+
+let pendingMsg = '';
+
+function getTime() {
+  return new Date().toLocaleTimeString('es', {hour:'2-digit', minute:'2-digit'});
+}
+
+function appendMsg(text, type) {
+  const box = document.getElementById('waMessages');
+  const div = document.createElement('div');
+  div.className = `msg ${type}`;
+  div.innerHTML = `${text}<div class="msg-time">${getTime()}</div>`;
+  box.appendChild(div);
+  box.scrollTop = box.scrollHeight;
+}
+
+function sendMessage() {
+  const input = document.getElementById('waInput');
+  const text = input.value.trim();
+  if (!text) return;
+  appendMsg(text, 'user');
+  input.value = '';
+  input.style.height = 'auto';
+
+  const key = text.toLowerCase();
+  const reply = Object.entries(botReplies).find(([k]) => key.includes(k.toLowerCase()));
+  setTimeout(() => {
+    if (reply) {
+      appendMsg(reply[1], 'bot');
+    } else {
+      appendMsg(`Entendido ? Voy a transferirle a WhatsApp para darle atenci�n personalizada sobre "<em>${text}</em>".`, 'bot');
+      setTimeout(() => openWhatsApp(text), 1200);
+    }
+  }, 700);
+}
+
+function sendQuick(text) {
+  document.getElementById('waInput').value = text;
+  sendMessage();
+}
+
+function addToChat(productName) {
+  appendMsg(`Me interesa el perfume <strong>${productName}</strong>. �Tienen stock y cu�l es el precio final con env�o?`, 'user');
+  setTimeout(() => {
+    appendMsg(`�Excelente elecci�n! ?? Revisando disponibilidad de <strong>${productName}</strong>... Un momento por favor.`, 'bot');
+    setTimeout(() => {
+      appendMsg(`Para finalizar la consulta sobre <strong>${productName}</strong>, haga clic en <a href="#" style="color:#25d366" onclick="openWhatsApp('Consulta sobre: ${productName}');return false;">continuar en WhatsApp ?</a>`, 'bot');
+    }, 1400);
+  }, 700);
+  document.querySelector('.wa-panel').scrollIntoView({behavior:'smooth', block:'center'});
+}
+
+function openWhatsApp(msg) {
+  const encoded = encodeURIComponent(msg || 'Hola! Quisiera consultar sobre sus perfumes.');
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
+  document.getElementById('waLink').href = url;
+  window.open(url, '_blank');
+}
+
+document.getElementById('waLink').addEventListener('click', function(e) {
+  e.preventDefault();
+  openWhatsApp('Hola! Entr� desde la web de Al Misk y quisiera consultar sobre sus perfumes.');
+});
+</script>
+<!-- End HTML Section -->
+</body>
+</html>
+
+
