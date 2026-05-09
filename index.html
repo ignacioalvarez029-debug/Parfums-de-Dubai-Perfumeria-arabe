@@ -1,278 +1,463 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Al Misk � Perfumer�a �rabe</title>
+<title>Parfums de Dubaï — Perfumería Árabe</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
-
+<style>
+/* Imagen real de producto */
+.bottle-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+.product-card:hover .bottle-img {
+  transform: scale(1.06) translateY(-3px);
+}
+.card-visual {
+  height: 220px;
+}
+.card-visual.no-image::after {
+  content: 'Imagen no disponible';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+  background: rgba(0, 0, 0, 0.35);
+  padding: 10px;
+  text-align: center;
+  pointer-events: none;
+}
+</style>
 </head>
-<!-- HTML Section -->
 <body>
 
 <!-- HEADER -->
-
 <header>
   <div class="logo">
-    <span class="logo-title">AL MISK</span>
-    <span class="logo-sub">Perfumer�a Oriental � Est. 2010</span>
+    <span class="logo-title">Parfums de Dubaï</span>
+    <span class="logo-sub">Perfumería Oriental · Est. 2026</span>
   </div>
   <nav>
-    <a href="#linea-oud">Oud</a>
-    <a href="#linea-musk">Musk</a>
-    <a href="#linea-rose">Rose</a>
-    <a href="#linea-amber">Amber</a>
+    <a href="#linea-armaf">Armaf</a>
+    <a href="#linea-lattafa">Lattafa</a>
+    <a href="#linea-haramain">Al Haramain</a>
+    <a href="#linea-otros">Otros</a>
   </nav>
-  <span class="header-ornament">? ? ?</span>
+  <span class="header-ornament">✦ ✦ ✦</span>
 </header>
 
 <!-- HERO -->
-
 <div class="hero">
-  <p class="hero-tag">? Colecci�n Exclusiva de Oriente ?</p>
-  <h1>El Arte de la<br/><em>Fragancia �rabe</em></h1>
-  <p>Cada frasco guarda siglos de tradici�n perfumera. Descubra nuestras l�neas exclusivas, elaboradas con los ingredientes m�s preciados de Oriente.</p>
-  <span class="arabic-ornament">?????? ???????</span>
+  <p class="hero-tag">Colección Exclusiva de Oriente</p>
+  <h1>El Arte de la<br/><em>Fragancia Árabe</em></h1>
+  <p>Cada frasco guarda siglos de tradición perfumera. Descubrí nuestras líneas exclusivas, elaboradas con los ingredientes más preciados de Oriente.</p>
+  <span class="arabic-ornament">✦ ✦ ✦</span>
 </div>
 
 <!-- MAIN LAYOUT -->
-
 <div class="main-layout">
-
-  <!-- CATALOG -->
 
   <div class="catalog">
 
-<!-- L�NEA OUD -->
-<div class="line-section" id="linea-oud" style="animation-delay:0.1s">
-  <div class="line-header">
-    <div class="line-icon">??</div>
-    <div class="line-info">
-      <h2>L�NEA OUD</h2>
-      <p>La esencia m�s codiciada del mundo �rabe � madera sagrada de Agarwood</p>
+    <!-- ARMAF -->
+    <div class="line-section" id="linea-armaf" style="animation-delay:0.1s">
+      <div class="line-header">
+        <div class="line-icon">🌙</div>
+        <div class="line-info">
+          <h2>ARMAF · Club de Nuit</h2>
+          <p>Fragancias icónicas con carácter, elegancia y presencia irresistible</p>
+        </div>
+        <span class="line-badge">Colección Principal</span>
+      </div>
+      <div class="products-grid" id="grid-armaf"></div>
     </div>
-    <span class="line-badge">Colecci�n Principal</span>
-  </div>
-  <div class="products-grid" id="grid-oud"></div>
-</div>
 
-<div class="ornament-divider">� ? �</div>
+    <div class="ornament-divider">✦ · ✦ · ✦</div>
 
-<!-- L�NEA MUSK -->
-<div class="line-section" id="linea-musk" style="animation-delay:0.2s">
-  <div class="line-header">
-    <div class="line-icon">??</div>
-    <div class="line-info">
-      <h2>L�NEA MUSK</h2>
-      <p>Suavidad et�rea, presencia duradera � el almizcle blanco del desierto</p>
+    <!-- LATTAFA -->
+    <div class="line-section" id="linea-lattafa" style="animation-delay:0.2s">
+      <div class="line-header">
+        <div class="line-icon">🌹</div>
+        <div class="line-info">
+          <h2>LATTAFA</h2>
+          <p>Fragancias árabes de alta calidad — desde el oud más intenso hasta lo más dulce y gourmand</p>
+        </div>
+        <span class="line-badge">Gran Variedad</span>
+      </div>
+      <div class="products-grid" id="grid-lattafa"></div>
     </div>
-    <span class="line-badge">Cl�sicos</span>
-  </div>
-  <div class="products-grid" id="grid-musk"></div>
-</div>
 
-<div class="ornament-divider">� ? �</div>
+    <div class="ornament-divider">✦ · ✦ · ✦</div>
 
-<!-- L�NEA ROSE -->
-<div class="line-section" id="linea-rose" style="animation-delay:0.3s">
-  <div class="line-header">
-    <div class="line-icon">??</div>
-    <div class="line-info">
-      <h2>L�NEA ROSE</h2>
-      <p>Rosa de Taif � la flor m�s arom�tica del mundo, destilada con maestr�a</p>
+    <!-- AL HARAMAIN / RASASI / AFNAN -->
+    <div class="line-section" id="linea-haramain" style="animation-delay:0.3s">
+      <div class="line-header">
+        <div class="line-icon">⭐</div>
+        <div class="line-info">
+          <h2>AL HARAMAIN · RASASI · AFNAN</h2>
+          <p>Las casas perfumeras árabes más prestigiosas del mundo</p>
+        </div>
+        <span class="line-badge">Edición Especial</span>
+      </div>
+      <div class="products-grid" id="grid-haramain"></div>
     </div>
-    <span class="line-badge">Edici�n Especial</span>
-  </div>
-  <div class="products-grid" id="grid-rose"></div>
-</div>
 
-<div class="ornament-divider">� ? �</div>
+    <div class="ornament-divider">✦ · ✦ · ✦</div>
 
-<!-- L�NEA AMBER -->
-<div class="line-section" id="linea-amber" style="animation-delay:0.4s">
-  <div class="line-header">
-    <div class="line-icon">??</div>
-    <div class="line-info">
-      <h2>L�NEA AMBER</h2>
-      <p>�mbar c�lido y especiado � notas profundas que envuelven el alma</p>
+    <!-- OTROS -->
+    <div class="line-section" id="linea-otros" style="animation-delay:0.4s">
+      <div class="line-header">
+        <div class="line-icon">💎</div>
+        <div class="line-info">
+          <h2>BHARARA · VULCAN · SPECTRE</h2>
+          <p>Fragancias premium de autor con identidad única y gran proyección</p>
+        </div>
+        <span class="line-badge">Selección</span>
+      </div>
+      <div class="products-grid" id="grid-otros"></div>
     </div>
-    <span class="line-badge">Temporada</span>
-  </div>
-  <div class="products-grid" id="grid-amber"></div>
-</div>
 
   </div><!-- /catalog -->
 
   <!-- WHATSAPP SIDEBAR -->
-
   <div class="wa-sidebar">
     <div class="wa-panel">
       <div class="wa-header">
-        <div class="wa-avatar">??</div>
+        <div class="wa-avatar">💬</div>
         <div class="wa-info">
-          <h3>AL MISK</h3>
-          <p><span class="wa-online-dot"></span>En l�nea � respondemos r�pido</p>
+          <h3>Parfums de Dubaï</h3>
+          <p><span class="wa-online-dot"></span>En línea · respondemos rápido</p>
         </div>
       </div>
 
-  <div class="wa-messages" id="waMessages">
-    <div class="msg bot">
-      ? �Bienvenido a <strong>Al Misk</strong>! Soy su asesor de fragancias. �En qu� puedo ayudarle hoy?
-      <div class="msg-time">Ahora</div>
+      <div class="wa-messages" id="waMessages">
+        <div class="msg bot">
+          ¡Bienvenido a <strong>Parfums de Dubaï</strong>! Soy tu asesor de fragancias. ¿En qué puedo ayudarte hoy?
+          <div class="msg-time">Ahora</div>
+        </div>
+        <div class="msg bot">
+          Podés preguntarme por disponibilidad, precios, combinaciones o hacer un pedido. ¡Con gusto te atiendo! ✨
+          <div class="msg-time">Ahora</div>
+        </div>
+      </div>
+
+      <div class="quick-replies">
+        <button class="qr-btn" onclick="sendQuick('Ver perfumes Armaf')">🌙 Armaf</button>
+        <button class="qr-btn" onclick="sendQuick('Ver perfumes Lattafa')">🌹 Lattafa</button>
+        <button class="qr-btn" onclick="sendQuick('Quiero ver los más vendidos')">⭐ Más vendidos</button>
+        <button class="qr-btn" onclick="sendQuick('Hacer un pedido')">📦 Pedido</button>
+        <button class="qr-btn" onclick="sendQuick('¿Tienen envíos?')">🚚 Envíos</button>
+      </div>
+
+      <div class="wa-compose">
+        <textarea id="waInput" placeholder="Escribe tu consulta..." rows="1"
+          onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendMessage()}"
+          oninput="this.style.height='auto';this.style.height=this.scrollHeight+'px'"></textarea>
+        <button class="send-btn" onclick="sendMessage()">
+          <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>
+        </button>
+      </div>
+
+      <div class="wa-footer">
+        Continúa en <a href="#" id="waLink">WhatsApp</a> · Parfums de Dubaï
+      </div>
     </div>
-    <div class="msg bot">
-      Puede preguntarme por disponibilidad, precios, combinaciones o hacer un pedido. Con gusto le atiendo ??
-      <div class="msg-time">Ahora</div>
-    </div>
   </div>
 
-  <div class="quick-replies">
-    <button class="qr-btn" onclick="sendQuick('Ver Oud disponibles')">?? Oud</button>
-    <button class="qr-btn" onclick="sendQuick('Quiero info de Musk')">?? Musk</button>
-    <button class="qr-btn" onclick="sendQuick('Precios de Rose')">?? Rose</button>
-    <button class="qr-btn" onclick="sendQuick('Hacer un pedido')">?? Pedido</button>
-    <button class="qr-btn" onclick="sendQuick('�Tienen env�os?')">?? Env�os</button>
-  </div>
-
-  <div class="wa-compose">
-    <textarea id="waInput" placeholder="Escribe tu consulta..." rows="1"
-      onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendMessage()}"
-      oninput="this.style.height='auto';this.style.height=this.scrollHeight+'px'"></textarea>
-    <button class="send-btn" onclick="sendMessage()">
-      <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>
-    </button>
-  </div>
-
-  <div class="wa-footer">
-    Contin�a en <a href="#" id="waLink">WhatsApp</a> � Al Misk Perfumer�a
-  </div>
-</div>
-
-  </div>
-
-</div>
+</div><!-- /main-layout -->
 
 <footer>
-  <span class="footer-gold">AL MISK</span>
-  � 2026 Al Misk Perfumer�a Oriental � Todos los derechos reservados � Fragancias de Oriente
+  <span class="footer-gold">PARFUMS DE DUBAÏ</span>
+  © 2026 Parfums de Dubaï · Perfumería Oriental · Todos los derechos reservados
 </footer>
 
 <script>
-// --- DATA -------------------------------------------------------------------
+console.log('Script started');
+const WHATSAPP_NUMBER = "598095983637";
 
-const WHATSAPP_NUMBER = "5491100000000"; // ? Cambia por tu n�mero real (con c�digo de pa�s, sin +)
-
+// ============================================================
+// CATÁLOGO REAL — cada img: apunta a img/productos/nombre.jpg
+// ============================================================
 const catalogData = {
-  oud: [
-    { name: "Oud Majestic", variant: "Concentrado Puro", price: "$85", size: "12ml", stock: true,  notes: ["Madera", "Tierra", "Especias"],      color: "#5a3e1b", color2: "#8b5e2c" },
-    { name: "Oud Al Layl", variant: "Eau de Parfum",     price: "$72", size: "50ml", stock: true,  notes: ["Oud", "Vainilla", "S�ndalo"],        color: "#3d2510", color2: "#6b3e1a" },
-    { name: "Oud Royale",  variant: "Attar Aceite",      price: "$110",size: "6ml",  stock: false, notes: ["Oud Cambodi", "Rosas", "Almizcle"],  color: "#4a2e0e", color2: "#7a4e20" },
-    { name: "Oud Noir",    variant: "Extrait",            price: "$95", size: "30ml", stock: true,  notes: ["Oud Ahumado", "Incienso", "Brea"],   color: "#1a1008", color2: "#3d2010" },
-    { name: "Oud Sultani", variant: "Concentrado",        price: "$65", size: "12ml", stock: false, notes: ["Oud", "Cardamomo", "Clavo"],          color: "#4e3010", color2: "#7e5020" },
-    { name: "Oud Fasil",   variant: "Eau de Parfum",      price: "$58", size: "100ml",stock: true,  notes: ["Oud Ligero", "Bergamota", "Cedro"],  color: "#3a2a10", color2: "#6a4a20" },
+
+  armaf: [
+    { name: "Club de Nuit Urban Man",   price: "$2650", notes: ["Cítrico", "Amaderado", "Ámbar"],      img: "img/productos/club-de-nuit-urban-man.jpg",   stock: true  },
+    { name: "Club de Nuit Precieux",    price: "$2700", notes: ["Frutal", "Amaderado", "Ámbar"],       img: "img/productos/club-de-nuit-precieux.jpg",    stock: true  },
+    { name: "Club de Nuit Intense Man", price: "$2300", notes: ["Limón", "Piña", "Ámbar"],             img: "img/productos/club-de-nuit-intense-man.jpg", stock: true  },
+    { name: "Club de Nuit Milestone",   price: "$2200", notes: ["Floral", "Amaderado", "Almizclado"],  img: "img/productos/club-de-nuit-milestone.jpg",   stock: true  },
+    { name: "Club de Nuit Iconic",      price: "$2300", notes: ["Fresco", "Marino", "Cedro"],          img: "img/productos/club-de-nuit-milestone.jpg",   stock: true  },
+    { name: "Club de Nuit Untold",      price: "$2700", notes: ["Frutal", "Especiado", "Ámbar"],       img: "img/productos/club-de-nuit-untold.jpg",      stock: true  },
+    { name: "Club de Nuit Sellage",     price: "$2500", notes: ["Fresco", "Amaderado", "Almizclado"],  img: "img/productos/club-de-nuit-untold.jpg",      stock: true  },
+    { name: "Club de Nuit Bling",       price: "$3500", notes: ["Elegante", "Especiado", "Amaderado"], img: "img/productos/club-de-nuit-bling.jpg",       stock: true  },
+    { name: "Club de Nuit Maleka",      price: "$2500", notes: ["Frutal", "Floral", "Almizclado"],     img: "img/productos/club-de-nuit-bling.jpg",       stock: true  },
+    { name: "Club de Nuit Woman",       price: "$2400", notes: ["Cítrico", "Floral", "Almizclado"],    img: "img/productos/club-de-nuit-woman.jpg",       stock: true  },
+    { name: "The Kingdom (For Her)",    price: "$2000", notes: ["Floral", "Frutal", "Cremoso"],        img: "img/productos/the-kingdom-her.jpg",          stock: true  },
+    { name: "Odyssey Bahamas",          price: "$1900", notes: ["Tropical", "Frutal", "Marino"],       img: "img/productos/odyssey-bahamas.jpg",          stock: true  },
+    { name: "Odyssey Black Forest",     price: "$2600", notes: ["Gourmand", "Oscuro", "Cremoso"],      img: "img/productos/odyssey-black-forest.jpg",     stock: true  },
+    { name: "Odyssey Toffee Coffee",    price: "$2200", notes: ["Café", "Caramelo", "Gourmand"],       img: "img/productos/odyssey-toffee-coffee.jpg",    stock: true  },
+    { name: "Odyssey Wild One",         price: "$2250", notes: ["Amaderado", "Especiado", "Intenso"],  img: "img/productos/odyssey-toffee-coffee.jpg",    stock: true  },
+    { name: "Odyssey White",            price: "$2200", notes: ["Fresco", "Limpio", "Amaderado"],      img: "img/productos/odyssey-white.jpg",            stock: true  },
+    { name: "Odyssey Spectra Rainbow",  price: "$2150", notes: ["Frutal", "Especiado", "Amaderado"],   img: "img/productos/odyssey-white.jpg",            stock: true  },
+    { name: "Odyssey Mandarin Sky",     price: "$2200", notes: ["Mandarina", "Cítrico", "Fresco"],     img: "img/productos/odyssey-mandarin-sky.jpg",     stock: true  },
+    { name: "Odyssey Limoni Fresh",     price: "$2200", notes: ["Limón", "Fresco", "Aromático"],       img: "img/productos/odyssey-limoni-fresh.jpg",     stock: true  },
+    { name: "Odyssey Homme Armaf",      price: "$2200", notes: ["Anís", "Amaderado", "Almizclado"],    img: "img/productos/odyssey-limoni-fresh.jpg",     stock: true  },
+    { name: "Odyssey Mega Man",         price: "$2100", notes: ["Cítrico", "Amaderado", "Energético"], img: "img/productos/odyssey-mega-man.jpg",         stock: true  },
+    { name: "Odyssey Dubai Chocolat",   price: "$2200", notes: ["Chocolate", "Gourmand", "Cálido"],    img: "img/productos/odyssey-dubai-chocolat.jpg",   stock: true  },
+    { name: "Odyssey Candee",           price: "$2200", notes: ["Dulce", "Caramelo", "Frutal"],        img: "img/productos/odyssey-dubai-chocolat.jpg",   stock: true  },
+    { name: "Odyssey Aoud Armaf",       price: "$2100", notes: ["Oud", "Especiado", "Amaderado"],      img: "img/productos/odyssey-aoud-armaf.jpg",       stock: true  },
+    { name: "Odyssey Tyrant Special",   price: "$2000", notes: ["Herbal", "Amaderado", "Especiado"],   img: "img/productos/odyssey-tyrant-special.jpg",   stock: true  },
+    { name: "Odyssey Marshmallow",      price: "$2200", notes: ["Dulce", "Vainilla", "Almizclado"],    img: "img/productos/odyssey-tyrant-special.jpg",   stock: true  },
+    { name: "Odyssey Revolution Ultra", price: "$2400", notes: ["Frutal", "Especiado", "Amaderado"],   img: "img/productos/odyssey-revolution-ultra.jpg", stock: true  },
   ],
-  musk: [
-    { name: "White Musk",    variant: "Eau de Parfum",  price: "$55", size: "50ml", stock: true,  notes: ["Musk", "Jazm�n", "Iris"],           color: "#9e9080", color2: "#c8b89a" },
-    { name: "Musk Al Tahir", variant: "Attar Aceite",   price: "$48", size: "6ml",  stock: true,  notes: ["Musk Blanco", "S�ndalo"],           color: "#7a6a5a", color2: "#a89880" },
-    { name: "Hareem Rose",   variant: "Concentrado",    price: "$62", size: "12ml", stock: false, notes: ["Musk", "Rosa", "Vainilla"],          color: "#8a7060", color2: "#b89880" },
-    { name: "Desert Musk",   variant: "Eau de Parfum",  price: "$50", size: "100ml",stock: true,  notes: ["Musk", "Arena", "Cedro"],           color: "#b09070", color2: "#d4b090" },
+
+  lattafa: [
+    { name: "Lattafa Khamrah",              price: "$1850", notes: ["Canela", "Dátil", "Vainilla"],        img: "img/productos/lattafa-khamrah.jpg",              stock: true  },
+    { name: "Lattafa Khamrah Qahwa",        price: "$1850", notes: ["Café", "Especiado", "Amaderado"],     img: "img/productos/lattafa-khamrah-qahwa.jpg",        stock: true  },
+    { name: "Lattafa Khamrah Dukhan",       price: "$2000", notes: ["Ahumado", "Especiado", "Naranja"],    img: "img/productos/lattafa-khamrah-qahwa.jpg",        stock: true  },
+    { name: "Lattafa Victoria",             price: "$1850", notes: ["Frutal", "Floral", "Vainilla"],       img: "img/productos/lattafa-victoria.jpg",             stock: true  },
+    { name: "Lattafa Nebres",               price: "$2000", notes: ["Amaderado", "Cuero", "Intenso"],      img: "img/productos/lattafa-nebres.jpg",               stock: true  },
+    { name: "Lattafa Fakhar Gold",          price: "$2000", notes: ["Oriental", "Amaderado", "Oud"],       img: "img/productos/lattafa-fakhar-gold.jpg",          stock: true  },
+    { name: "Lattafa Fakhar Woman",         price: "$1850", notes: ["Floral", "Almizclado", "Cremoso"],    img: "img/productos/lattafa-fakhar-gold.jpg",          stock: true  },
+    { name: "Lattafa Fakhar Black",         price: "$2000", notes: ["Manzana", "Especiado", "Amaderado"],  img: "img/productos/lattafa-fakhar-black.jpg",         stock: true  },
+    { name: "Lattafa Fakhar Platin",        price: "$2000", notes: ["Cítrico", "Lavanda", "Amaderado"],    img: "img/productos/lattafa-fakhar-platin.jpg",        stock: true  },
+    { name: "Lattafa Mayar Natural Intense",price: "$1850", notes: ["Frutal", "Floral", "Exótico"],        img: "img/productos/lattafa-mayar-natural-intense.jpg",stock: true  },
+    { name: "Lattafa Mayar Cherry Intense", price: "$2000", notes: ["Cereza", "Frutal", "Cremoso"],        img: "img/productos/lattafa-mayar-cherry-intense.jpg", stock: true  },
+    { name: "Lattafa Teriaq Intense",       price: "$2250", notes: ["Especiado", "Amaderado", "Intenso"],  img: "img/productos/teriaq-intense-lattafa.jpg",       stock: true  },
+    { name: "Lattafa Teriaq Woman",         price: "$2250", notes: ["Floral", "Especiado", "Almizclado"],  img: "img/productos/teriaq-intense-lattafa.jpg",       stock: true  },
+    { name: "Lattafa Yara Rosa",            price: "$1850", notes: ["Cremoso", "Frutal", "Vainilla"],      img: "img/productos/lattafa-yara-rosa.jpg",            stock: true  },
+    { name: "Lattafa Yara Moi",             price: "$1850", notes: ["Melocotón", "Floral", "Cremoso"],     img: "img/productos/lattafa-yara-moi.jpg",             stock: true  },
+    { name: "Lattafa Yara Tous",            price: "$1660", notes: ["Mango", "Tropical", "Vainilla"],      img: "img/productos/lattafa-yara-moi.jpg",             stock: true  },
+    { name: "Lattafa Yara Candy",           price: "$2000", notes: ["Fresa", "Dulce", "Cremoso"],          img: "img/productos/lattafa-yara-candy.jpg",           stock: true  },
+    { name: "Lattafa Her Confession",       price: "$2000", notes: ["Floral", "Especiado", "Almizclado"],  img: "img/productos/lattafa-her-confession.jpg",       stock: true  },
+    { name: "Lattafa His Confession",       price: "$2000", notes: ["Especiado", "Amaderado", "Oscuro"],   img: "img/productos/lattafa-her-confession.jpg",       stock: true  },
+    { name: "Lattafa Asad Elixir",          price: "$2000", notes: ["Especiado", "Ámbar", "Amaderado"],    img: "img/productos/lattafa-asad-elixir.jpg",          stock: true  },
+    { name: "Lattafa Asad Bourbon",         price: "$1990", notes: ["Especiado", "Licor", "Amaderado"],    img: "img/productos/lattafa-asad-bourbon.jpg",         stock: true  },
+    { name: "Asad Zanzibar",                price: "$1800", notes: ["Lavanda", "Coco", "Marino"],          img: "img/productos/asad-zanzibar.jpg",                stock: true  },
+    { name: "Asad Lattafa",                 price: "$2200", notes: ["Especiado", "Vainilla", "Intenso"],   img: "img/productos/asad-zanzibar.jpg",                stock: true  },
+    { name: "Lattafa Vintage Radio",        price: "$1850", notes: ["Dulce", "Amaderado", "Especiado"],    img: "img/productos/lattafa-vintage-radio.jpg",        stock: true  },
+    { name: "Ameer Al Oudh Intense",        price: "$1850", notes: ["Oud", "Ahumado", "Amaderado"],        img: "img/productos/ameer-al-oudh-intense.jpg",        stock: true  },
+    { name: "Bade'e Al Oud Sublime",        price: "$1720", notes: ["Oud", "Especiado", "Cálido"],         img: "img/productos/badee-al-oud-sublime.jpg",         stock: true  },
+    { name: "Bade'e Al Oud For Glory",      price: "$1720", notes: ["Oud", "Oscuro", "Intenso"],           img: "img/productos/badee-al-oud-sublime.jpg",         stock: true  },
+    { name: "Bade'e Al Oud Amethyst",       price: "$1720", notes: ["Oud", "Amaderado", "Rosa"],           img: "img/productos/badee-al-oud-amethyst.jpg",        stock: true  },
+    { name: "Bade'e Al Oud Noble Blush",    price: "$1720", notes: ["Oud", "Floral", "Dulce"],             img: "img/productos/badee-al-oud-noble-blush.jpg",     stock: true  },
+    { name: "Badee Al Oud Honor & Glory",   price: "$1900", notes: ["Oud", "Fresco", "Amaderado"],         img: "img/productos/badee-al-oud-honor-glory-white.jpg",stock: true },
+    { name: "Eclaire Pistache",             price: "$2000", notes: ["Pistacho", "Coco", "Cremoso"],        img: "img/productos/eclaire-pistache.jpg",             stock: true  },
+    { name: "Eclaire Banoffi",              price: "$2000", notes: ["Banana", "Caramelo", "Vainilla"],     img: "img/productos/eclaire-pistache.jpg",             stock: true  },
+    { name: "Lattafa Eclaire",              price: "$2000", notes: ["Vainilla", "Caramelo", "Floral"],     img: "img/productos/lattafa-eclaire.jpg",              stock: true  },
+    { name: "Vanilla Freak Lattafa",        price: "$2760", notes: ["Vainilla", "Almendra", "Gourmand"],   img: "img/productos/vanilla-freak-lattafa.jpg",        stock: true  },
+    { name: "Choco Overdose Lattafa",       price: "$2760", notes: ["Chocolate", "Cremoso", "Dulce"],      img: "img/productos/vanilla-freak-lattafa.jpg",        stock: true  },
+    { name: "Berry on Top Lattafa",         price: "$2760", notes: ["Frutas Rojas", "Dulce", "Cremoso"],   img: "img/productos/berry-on-top-lattafa.jpg",         stock: true  },
+    { name: "Mallow Madness Lattafa",       price: "$2760", notes: ["Malvavisco", "Dulce", "Cremoso"],     img: "img/productos/mallow-madness-lattafa.jpg",       stock: true  },
+    { name: "Whipped Pleasure Lattafa",     price: "$2760", notes: ["Cremoso", "Vainilla", "Floral"],      img: "img/productos/mallow-madness-lattafa.jpg",       stock: true  },
+    { name: "Cookie Crave Lattafa",         price: "$2760", notes: ["Galleta", "Cremoso", "Gourmand"],     img: "img/productos/cookie-crave-lattafa.jpg",         stock: true  },
+    { name: "Liquid Brun Lattafa",          price: "$3100", notes: ["Vainilla", "Canela", "Amaderado"],    img: "img/productos/liquid-brun-lattafa.jpg",          stock: true  },
+    { name: "Musumam Lattafa",              price: "$2000", notes: ["Oriental", "Especiado", "Floral"],    img: "img/productos/musumam.jpg",                      stock: true  },
+    { name: "Musumam White Intense",        price: "$2200", notes: ["Cítrico", "Floral", "Amaderado"],     img: "img/productos/musumam.jpg",                      stock: true  },
+    { name: "Cocoa Morado",                 price: "$2500", notes: ["Cacao", "Dátil", "Amaderado"],        img: "img/productos/cocoa-morado.jpg",                 stock: true  },
+    { name: "Azzure Aoud",                  price: "$2500", notes: ["Oud", "Frutal", "Amaderado"],         img: "img/productos/cocoa-morado.jpg",                 stock: true  },
+    { name: "La Collection d'Antiquités",   price: "$2200", notes: ["Cuero", "Amaderado", "Intenso"],      img: "img/productos/lattafa-nebres.jpg",               stock: true  },
   ],
-  rose: [
-    { name: "Taif Rose",     variant: "Attar Puro",     price: "$130",size: "6ml",  stock: true,  notes: ["Rosa Taif", "Almizcle"],            color: "#8b2040", color2: "#c04060" },
-    { name: "Rose Oud",      variant: "Extrait",        price: "$90", size: "30ml", stock: true,  notes: ["Rosa", "Oud", "S�ndalo"],           color: "#6b1830", color2: "#a03050" },
-    { name: "Rose Saffron",  variant: "Eau de Parfum",  price: "$75", size: "50ml", stock: false, notes: ["Rosa", "Azafr�n", "Incienso"],      color: "#7a2030", color2: "#b04050" },
-    { name: "Gulabi",        variant: "Concentrado",    price: "$68", size: "12ml", stock: true,  notes: ["Rosa India", "Jazm�n", "Musk"],     color: "#952848", color2: "#c55070" },
-    { name: "Rose de Nuit",  variant: "Eau de Parfum",  price: "$60", size: "100ml",stock: true,  notes: ["Rosa Nocturna", "Almendro", "Iris"],color: "#5a1028", color2: "#903048" },
+
+  haramain: [
+    { name: "Amber Oud Gold Edition",  price: "$3100", notes: ["Frutal", "Vainilla", "Ámbar"],       img: "img/productos/amber-oud-gold-edition.jpg",  stock: true  },
+    { name: "Amber Oud Aqua Dubai",    price: "$3990", notes: ["Frutal", "Marino", "Fresco"],         img: "img/productos/amber-oud-aqua-dubai.jpg",    stock: true  },
+    { name: "Hawas Ice",               price: "$1990", notes: ["Acuático", "Cítrico", "Fresco"],      img: "img/productos/hawas-ice.jpg",               stock: true  },
+    { name: "Rasasi Hawas Fire",       price: "$2450", notes: ["Intenso", "Especiado", "Amaderado"],  img: "img/productos/rasasi-hawas-fire.jpg",       stock: true  },
+    { name: "Rasasi Hawas Pink",       price: "$2450", notes: ["Floral", "Frutal", "Almizclado"],     img: "img/productos/rasasi-hawas-fire.jpg",       stock: true  },
+    { name: "Rasasi Hawas Éclat",      price: "$2500", notes: ["Floral", "Fresco", "Elegante"],       img: "img/productos/rasasi-hawas-eclat.jpg",      stock: true  },
+    { name: "Rasasi Hawas for Her",    price: "$1800", notes: ["Floral", "Almizclado", "Suave"],      img: "img/productos/rasasi-hawas-eclat.jpg",      stock: true  },
+    { name: "9PM Pour Femme",          price: "$2050", notes: ["Frutal", "Floral", "Vainilla"],       img: "img/productos/9pm-pour-femme.jpg",          stock: true  },
+    { name: "9PM Elixir",              price: "$2450", notes: ["Manzana", "Canela", "Especiado"],     img: "img/productos/9pm-elixir.jpg",              stock: true  },
+    { name: "9AM Dive",                price: "$2350", notes: ["Marino", "Fresco", "Cítrico"],        img: "img/productos/9pm-elixir.jpg",              stock: true  },
+    { name: "Lattafa Atlas",           price: "$2000", notes: ["Fresco", "Amaderado", "Especiado"],   img: "img/productos/amber-oud-aqua-dubai.jpg",    stock: true  },
   ],
-  amber: [
-    { name: "Amber Sultani", variant: "Eau de Parfum",  price: "$65", size: "50ml", stock: true,  notes: ["�mbar", "Vainilla", "Bals�mico"],   color: "#8b5e10", color2: "#c08820" },
-    { name: "Gold Amber",    variant: "Attar Aceite",   price: "$58", size: "6ml",  stock: false, notes: ["�mbar Oro", "Labdanum", "Resina"],  color: "#7a4e08", color2: "#aa7818" },
-    { name: "Amber Noir",    variant: "Extrait",        price: "$88", size: "30ml", stock: true,  notes: ["�mbar Negro", "Cuero", "Tabaco"],   color: "#4e3008", color2: "#7a5018" },
-    { name: "Oriental Ambar",variant: "Concentrado",    price: "$72", size: "12ml", stock: true,  notes: ["�mbar", "Cardamomo", "Nuez Moscada"],color:"#6a4010", color2: "#9a6818" },
+
+  otros: [
+    { name: "Bharara King",          price: "$3800", notes: ["Cuero", "Amaderado", "Intenso"],      img: "img/productos/bharara-king.jpg",          stock: true  },
+    { name: "Bharara Doble Bleu",    price: "$3800", notes: ["Marino", "Amaderado", "Fresco"],      img: "img/productos/bharara-king.jpg",          stock: true  },
+    { name: "Vulcan Feu",            price: "$3500", notes: ["Cítrico", "Aromático", "Amaderado"],  img: "img/productos/vulcan-feu.jpg",            stock: true  },
+    { name: "Vulcan Baie",           price: "$3500", notes: ["Frutal", "Floral", "Especiado"],      img: "img/productos/vulcan-baie.jpg",           stock: true  },
+    { name: "Vulcan Sable",          price: "$3500", notes: ["Vainilla", "Amaderado", "Cálido"],    img: "img/productos/vulcan-baie.jpg",           stock: true  },
+    { name: "Spectre Ghost",         price: "$3300", notes: ["Cuero", "Amaderado", "Oscuro"],       img: "img/productos/badee-al-oud-noble-blush.jpg",stock: true},
+    { name: "Aether Extrait",        price: "$2600", notes: ["Fresco", "Especiado", "Amaderado"],   img: "img/productos/aether-extrait.jpg",        stock: true  },
+    { name: "The Kingdom (For Him)", price: "$1990", notes: ["Amaderado", "Especiado", "Ámbar"],    img: "img/productos/the-kingdom-her.jpg",       stock: true  },
   ]
 };
 
-// --- SVG BOTTLE RENDERER ----------------------------------------------------
+const whatsappImagesByLine = {
+  armaf: [
+    'club de nuit urban man.jpeg',
+    'Club de Nuit Precieux.jpeg',
+    'club de nuit intense man.jpeg',
+    'club de nuit milestone.jpeg',
+    'club de nuit iconic.jpeg',
+    'club de nuit untold.jpeg',
+    'club de nuit sillage.jpeg',
+    'club de nuit bling.jpeg',
+    'club de nuit maleka.jpeg',
+    'club de nuit woman.jpeg',
+    'the kingdom.jpeg',
+    'odyssey bahamas.jpeg',
+    'odyssey black forest .jpeg',
+    'odyssey toffee coffee .jpeg',
+    'odyssey wild one.jpeg',
+    'odyssey white edition.jpeg',
+    'odyssey spectra.jpeg',
+    'odysey mandarine sky .jpeg',
+    'odyssey limoni.jpeg',
+    'odyssey homme negro.jpeg',
+    'odyssey mega man armaf.jpeg',
+    'odyssey dubai chocolate.jpeg',
+    'odyssey candee.jpeg',
+    'odyssey aoud armaf.jpeg',
+    'odyssey tyrant.jpeg',
+    'odyssey marshmallow.jpeg',
+    'odyssey revolution ultra.jpeg'
+  ],
+  lattafa: [
+    'lattafa kharmrah.jpeg',
+    'lataffa qahwa.jpeg',
+    'khamrah dukhan.jpeg',
+    'lataffa victoria.jpeg',
+    'lataffa nebres.jpeg',
+    'lataffa fakhar gold.jpeg',
+    'lattafa fakhar woman.jpeg',
+    'lattafa fakhar black.jpeg',
+    'lattafa fakhar platin.jpeg',
+    'lattafa mayar natural intense .jpeg',
+    'lattafa mayar cherry intense.jpeg',
+    'lattafa teriaq intense.webp',
+    'lattafa teriaq woman.jpeg',
+    'lattafa yara rosa.webp',
+    'lattafa yara moi.jpeg',
+    'lattafa yara tous.jpeg',
+    'lattafa yara candy.jpeg',
+    'lattafa her confession.jpeg',
+    'lattafa his confession.jpeg',
+    'lattafa asad elixir.jpeg',
+    'lattafa asad bourbon.jpeg',
+    'Lattafa Asad Zanzibar.webp',
+    'lattafa asad.jpeg',
+    'lattaffa vintage radio .jpeg',
+     'ameer al oudh intense oud .jpeg',
+     'lattafa bade al oud.jpeg',
+     'bade oud for glory.jpeg',
+     'bade al oud amethyst.jpeg',
+     'bade al oud noble blush.jpeg',
+     'badee al oud honor & glory white.jpeg',
+     'lattafa eclaire pistache.jpeg',
+     'lattafa eclaire banoffi.jpeg',
+     'lattafa eclaire.jpeg',
+     'lattafa vanilla freak.jpeg',
+     'lattafa ovedose choco.jpeg',
+     'berry on top lattafa.jpeg',
+     'lattafa give me gormand mallow madness.webp',
+     'lattafa whipped pleasure.webp',
+     'lattafa cookie crave.webp',
+     'liquid brun lattafa.jpeg',
+     'lattafa musamam.jpeg',
+     'lattafa musamam white intese.jpeg',
+     'cocoa morado.jpeg',
+     'azzure aoud.jpeg',
+     'lattafa la collection d antiquies .jpeg'
+  ],
+  haramain: [
+    
+    'amber oud gold edition.jpeg',
+    'amber oud aqua dubai.jpeg',
+    'hawas ice .jpeg',
+    'hawas fire.jpeg',
+    'hawas rasasis pink.webp',
+    'hawas eclat.jpeg',
+    'hawas rasasis for her.webp',
+    '9 pm pour femme.jpeg',
+    '9 am afnan elixir.jpeg',
+    '9 am afnan dive .jpeg',
+    'lattafa atlas.jpeg',
+  ],
+  otros: [
+    'bharara king.png',
+    'bharara bleu doble.jpg',
+    'volcan feu.jpeg',
+    'vulkan baie.webp',
+    'vulkan sable.webp',
+    'spectre gosht.jpeg',
+    'aether extrait.jpeg',
+    'the kingdom.jpeg'
+  ]
+};
 
-function bottleSVG(c1, c2) {
-  return `<svg class="bottle-svg" viewBox="0 0 80 130" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="bg${c1.replace('#','')}" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="${c1}"/>
-        <stop offset="100%" stop-color="${c2}"/>
-      </linearGradient>
-      <linearGradient id="shine${c1.replace('#','')}" x1="0%" y1="0%" x2="40%" y2="100%">
-        <stop offset="0%" stop-color="rgba(255,255,255,0.25)"/>
-        <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
-      </linearGradient>
-    </defs>
-    <!-- Tapa -->
-    <rect x="28" y="0" width="24" height="10" rx="2" fill="${c2}" opacity="0.9"/>
-    <rect x="31" y="10" width="18" height="14" rx="1" fill="${c1}"/>
-    <!-- Cuerpo -->
-    <rect x="12" y="24" width="56" height="90" rx="8" fill="url(#bg${c1.replace('#','')})"/>
-    <!-- Brillo -->
-    <rect x="14" y="26" width="20" height="85" rx="6" fill="url(#shine${c1.replace('#','')})"/>
-    <!-- Etiqueta -->
-    <rect x="18" y="55" width="44" height="40" rx="3" fill="rgba(0,0,0,0.25)"/>
-    <rect x="20" y="57" width="40" height="36" rx="2" fill="rgba(201,168,76,0.08)" stroke="rgba(201,168,76,0.3)" stroke-width="0.5"/>
-    <!-- Decoraci�n etiqueta -->
-    <line x1="24" y1="63" x2="56" y2="63" stroke="rgba(201,168,76,0.4)" stroke-width="0.5"/>
-    <line x1="24" y1="87" x2="56" y2="87" stroke="rgba(201,168,76,0.4)" stroke-width="0.5"/>
-    <circle cx="40" cy="75" r="6" fill="none" stroke="rgba(201,168,76,0.4)" stroke-width="0.5"/>
-    <circle cx="40" cy="75" r="2" fill="rgba(201,168,76,0.3)"/>
-    <!-- Base -->
-    <rect x="16" y="110" width="48" height="4" rx="2" fill="${c1}" opacity="0.6"/>
-  </svg>`;
+function getWhatsAppImage(lineName, index) {
+  const images = whatsappImagesByLine[lineName] || whatsappImagesByLine.armaf;
+  const image = images[index % images.length];
+  return `whatsapp/${image}`;
 }
 
-// --- RENDER PRODUCTS --------------------------------------------------------
-
-function renderGrid(containerId, products) {
+// ============================================================
+// RENDER CARDS
+// ============================================================
+function renderGrid(containerId, products, startIndex, lineName) {
+  console.log(`Rendering ${containerId} with ${products.length} products`);
   const el = document.getElementById(containerId);
-  el.innerHTML = products.map(p => `
-    <div class="product-card ${p.stock ? '' : 'out-of-stock'}" onclick="addToChat('${p.name}')">
-      <div class="card-visual" style="background:linear-gradient(135deg,${p.color}22,${p.color2}44)">
-        ${bottleSVG(p.color, p.color2)}
-        <span class="stock-badge ${p.stock ? 'in' : 'out'}">${p.stock ? '? Stock' : '? Agotado'}</span>
+  el.innerHTML = products.map((p, index) => {
+    const productImage = getWhatsAppImage(lineName, startIndex + index);
+    return `
+    <div class="product-card ${p.stock ? '' : 'out-of-stock'}" onclick='addToChat(${JSON.stringify(p.name)}, ${JSON.stringify(p.price)})'>
+      <div class="card-visual" style="background:linear-gradient(135deg,#1a1308,#2e2010)">
+        <img src="${productImage}" alt="${p.name}" class="bottle-img"
+          onerror="this.style.display='none';" />
+        <span class="stock-badge ${p.stock ? 'in' : 'out'}">${p.stock ? '✦ Stock' : '✦ Agotado'}</span>
       </div>
       <div class="card-body">
         <div class="card-name">${p.name}</div>
-        <div class="card-variant">${p.variant}</div>
         <div class="card-notes">${p.notes.map(n => `<span class="note-tag">${n}</span>`).join('')}</div>
         <div class="card-footer">
-          <div>
-            <div class="card-price">${p.price}</div>
-            <div class="card-size">${p.size}</div>
-          </div>
-          <button class="btn-ask" onclick="event.stopPropagation();addToChat('${p.name}')">Consultar</button>
+          <div class="card-price">${p.price}</div>
+          <button class="btn-ask" onclick='event.stopPropagation();addToChat(${JSON.stringify(p.name)}, ${JSON.stringify(p.price)})'>Consultar</button>
         </div>
       </div>
     </div>
-  `).join('');
+  `;
+  }).join('');
+  return startIndex + products.length;
 }
 
-renderGrid('grid-oud',   catalogData.oud);
-renderGrid('grid-musk',  catalogData.musk);
-renderGrid('grid-rose',  catalogData.rose);
-renderGrid('grid-amber', catalogData.amber);
+function renderAllGrids() {
+  renderGrid('grid-armaf', catalogData.armaf, 0, 'armaf');
+  renderGrid('grid-lattafa', catalogData.lattafa, 0, 'lattafa');
+  renderGrid('grid-haramain', catalogData.haramain, 0, 'haramain');
+  renderGrid('grid-otros', catalogData.otros, 0, 'otros');
+}
 
-// --- WHATSAPP CHAT -----------------------------------------------------------
+window.addEventListener('load', renderAllGrids);
 
+// ============================================================
+// WHATSAPP CHAT
+// ============================================================
 const botReplies = {
-  'ver oud disponibles':   '?? Nuestra l�nea Oud cuenta con 4 opciones disponibles actualmente: Oud Majestic, Oud Al Layl, Oud Noir y Oud Fasil. �Le interesa alguno en particular?',
-  'quiero info de musk':   '?? La l�nea Musk es perfecta para uso diario. White Musk y Desert Musk est�n en stock. Hareem Rose est� temporalmente agotado. �Desea precios?',
-  'precios de rose':       '?? L�nea Rose: Taif Rose (attar puro) $130 � Rose Oud $90 � Gulabi $68 � Rose de Nuit $60. �Todos son de alta concentraci�n!',
-  'hacer un pedido':       '?? �Con mucho gusto! Para gestionar su pedido necesito: nombre del producto, cantidad y su direcci�n de entrega. Tambi�n puede escribirlo aqu� y lo transferimos a WhatsApp.',
-  '�tienen env�os?':       '?? S�, realizamos env�os a todo el pa�s. Env�o gratis en compras mayores a $150. Entrega en 2-4 d�as h�biles. �Tiene alguna consulta adicional?',
+  'armaf':         '🌙 La línea Armaf incluye Club de Nuit Urban Man, Intense Man, Precieux y toda la familia Odyssey. ¿Te interesa alguno en particular?',
+  'lattafa':       '🌹 Lattafa tiene una variedad enorme: desde Khamrah y Fakhar hasta la línea gourmand Give Me Gourmand. ¿Querés algo intenso, dulce o fresco?',
+  'más vendidos':  '⭐ Los más pedidos son: Club de Nuit Intense Man, Amber Oud Gold Edition, Lattafa Khamrah y Odyssey Black Forest. ¡Todos con excelente fijación!',
+  'pedido':        '📦 ¡Con mucho gusto! Para hacer tu pedido necesito: nombre del producto, cantidad y dirección de entrega. También podés continuar por WhatsApp.',
+  'envíos':        '🚚 Sí, realizamos envíos a todo el país.Entrega en 2-4 días hábiles.',
 };
 
-let pendingMsg = '';
-
 function getTime() {
-  return new Date().toLocaleTimeString('es', {hour:'2-digit', minute:'2-digit'});
+  return new Date().toLocaleTimeString('es', { hour: '2-digit', minute: '2-digit' });
 }
 
 function appendMsg(text, type) {
@@ -298,7 +483,7 @@ function sendMessage() {
     if (reply) {
       appendMsg(reply[1], 'bot');
     } else {
-      appendMsg(`Entendido ? Voy a transferirle a WhatsApp para darle atenci�n personalizada sobre "<em>${text}</em>".`, 'bot');
+      appendMsg(`Entendido ✨ Te voy a transferir a WhatsApp para darte atención personalizada sobre "<em>${text}</em>".`, 'bot');
       setTimeout(() => openWhatsApp(text), 1200);
     }
   }, 700);
@@ -309,31 +494,29 @@ function sendQuick(text) {
   sendMessage();
 }
 
-function addToChat(productName) {
-  appendMsg(`Me interesa el perfume <strong>${productName}</strong>. �Tienen stock y cu�l es el precio final con env�o?`, 'user');
+function addToChat(productName, price) {
+  appendMsg(`Me interesa <strong>${productName}</strong> (${price}). ¿Tienen stock y cuál es el precio final con envío?`, 'user');
   setTimeout(() => {
-    appendMsg(`�Excelente elecci�n! ?? Revisando disponibilidad de <strong>${productName}</strong>... Un momento por favor.`, 'bot');
+    appendMsg(`¡Excelente elección! ✨ Revisando disponibilidad de <strong>${productName}</strong>... Un momento.`, 'bot');
     setTimeout(() => {
-      appendMsg(`Para finalizar la consulta sobre <strong>${productName}</strong>, haga clic en <a href="#" style="color:#25d366" onclick="openWhatsApp('Consulta sobre: ${productName}');return false;">continuar en WhatsApp ?</a>`, 'bot');
+      appendMsg(`Para finalizar la consulta sobre <strong>${productName}</strong>, hacé clic en <a href="#" style="color:#25d366" onclick='openWhatsApp(${JSON.stringify('Consulta sobre: ' + productName + ' ' + price)});return false;'>continuar en WhatsApp →</a>`, 'bot');
     }, 1400);
   }, 700);
-  document.querySelector('.wa-panel').scrollIntoView({behavior:'smooth', block:'center'});
+  document.querySelector('.wa-panel').scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
 function openWhatsApp(msg) {
   const encoded = encodeURIComponent(msg || 'Hola! Quisiera consultar sobre sus perfumes.');
-  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
+  const url = `https://wa.me/${598094794928}?text=${encoded}`;
   document.getElementById('waLink').href = url;
   window.open(url, '_blank');
 }
 
 document.getElementById('waLink').addEventListener('click', function(e) {
   e.preventDefault();
-  openWhatsApp('Hola! Entr� desde la web de Al Misk y quisiera consultar sobre sus perfumes.');
+  openWhatsApp('Hola! Entré desde la web de Parfums de Dubaï y quisiera consultar sobre sus perfumes.');
 });
 </script>
-<!-- End HTML Section -->
 </body>
 </html>
-
 
